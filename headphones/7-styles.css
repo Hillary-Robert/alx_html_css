@@ -1,3 +1,6 @@
+
+
+
 *{
   padding: 0;
   margin: 0;
@@ -134,6 +137,10 @@ button:active{
 
 
 
+
+
+
+
 /* What we do section */
 
 
@@ -147,6 +154,7 @@ button:active{
   text-align: center;
 
   padding: 4rem 12rem;
+
 
 }
 
@@ -169,6 +177,7 @@ button:active{
 .what-text-container p{
   width: 50%;
   padding-top: 4rem;
+
 }
 
 
@@ -181,6 +190,7 @@ button:active{
   justify-content: space-between;
   align-items: center;
   padding-top: 6rem;
+
 }
 
 
@@ -191,11 +201,30 @@ button:active{
   justify-content: center;
   align-items: center;
   row-gap: 2rem;
+
 }
 
 
 #what-first{
   width: 45%;
+ 
+}
+
+
+@keyframes spin{
+  0%{
+
+  }
+
+  50%{
+    scale: 1.5;
+  }
+
+
+
+  100%{
+    transform: rotate(360);
+  }
 }
 
 
@@ -203,8 +232,18 @@ button:active{
 .what-image img{
   width: 30%;
 
+  animation-duration: 4s;
+  animation-name: spin;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-delay: 1s;
+
 }
 
+
+.what-image img:hover{
+  animation-play-state: paused;
+}
 
 
 
@@ -260,6 +299,27 @@ button:active{
   justify-content: space-between;
   text-align: center;
   column-gap: 4rem;
+
+  animation-name: slideleft;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-direction: normal;
+
+  animation-delay: 1s;
+}
+
+
+@keyframes slideleft{
+
+  from{
+    transform: translate(-1500px);
+
+  }
+
+  to{
+    transform: translate(0);
+
+  }
 }
 
 
@@ -295,7 +355,120 @@ button:active{
 
 
 
+/* Contact Section */
 
+
+#contact, .contact-container{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+
+
+
+.form-container{
+  width: 100%;
+
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  text-align: left;
+  margin: 3rem 0rem;
+}
+
+
+
+input, textarea{
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);;
+  font-size: 1rem;
+  box-sizing: border-box;
+  padding: 0.5rem 0rem;
+  outline: none;
+  
+}
+
+input::placeholder, textarea::placeholder{
+  color: black;
+  font-weight: 600;
+}
+
+
+input:focus, textarea:focus{
+  border-bottom-color: #ff6565; 
+  transition: border-bottom-color 0.3s ease;
+
+}
+
+
+
+
+
+
+/* Footer */
+
+
+.footer{
+  background-color: #071629;
+  padding: 4rem 12rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 8rem;
+  margin-top: 8rem;
+}
+
+
+.footer-logo img{
+  width: 250px;
+}
+
+.footer-container{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+
+.footercontainer-image{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  column-gap: 2rem;
+}
+
+
+
+.footercontainer-image img{
+  width: 10%;
+
+}
+
+
+
+.copy{
+  color: white;
+  opacity: 30%;
+}
+
+
+
+
+
+/* Responsiveness */
 
 
 
@@ -362,7 +535,6 @@ button:active{
 
 
 
-
   /* Our result section */
 
 
@@ -402,9 +574,35 @@ button:active{
   }
 
 
+  /* Contact Section */
+
+  .form-container{
+  
+    margin: 2rem 0rem;
+  }
+
+
+  /* Footer */
+
+  .footer{
+    background-color: #071629;
+    padding: 4rem 8rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 6rem;
+    margin-top: 6rem;
+  }
+
+
+  .footer-logo img{
+    width: 200px;
+  }
+  
 
 }
-
 
 
 
@@ -440,10 +638,6 @@ button:active{
     padding-bottom: 6rem;
   }
 
-
-
-
-
   /* What we do section */
 
 
@@ -473,6 +667,7 @@ button:active{
   .what-image{
     row-gap: 10%;
   }
+
 
 
   /* Our result section */
@@ -514,12 +709,35 @@ button:active{
   }
 
 
+  /* Contact Section */
+
+  .form-container{
+  
+    margin: 2rem 0rem;
+  }
+
+
+  /* Footer */
+
+  .footer{
+    background-color: #071629;
+    padding: 3rem 6rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 4rem;
+    margin-top: 4rem;
+  }
+
+
+  .footer-logo img{
+    width: 150px;
+  }
   
 
 }
-
-
-
 
 
 
@@ -580,8 +798,7 @@ button:active{
   }
 
 
-
-
+  
   /* What we do section */
 
 
@@ -613,10 +830,11 @@ button:active{
   }
 
 
-   /* Our result section */
+
+  /* Our result section */
 
 
-   #ourResult{
+  #ourResult{
     width: 100%;
     padding: 2rem 4rem;
     color: white;
@@ -652,9 +870,35 @@ button:active{
   }
 
 
+  /* Contact Section */
+
+  .form-container{
+  
+    margin: 1.5rem 0rem;
+  }
+
+
+  /* Footer */
+
+  .footer{
+    background-color: #071629;
+    padding: 2rem 4rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 2rem;
+    margin-top: 2rem;
+  }
+
+
+  .footer-logo img{
+    width: 100px;
+  }
+  
 
 }
-
 
 
 
@@ -692,14 +936,10 @@ button:active{
     padding-bottom: 2rem;
   }
 
+  /* What we do section */
 
 
-
-
-   /* What we do section */
-
-
-   #WhatWeDo{
+  #WhatWeDo{
     padding: 1rem 2rem;
   
   }
@@ -728,12 +968,10 @@ button:active{
 
 
 
+  /* Our result section */
 
 
-   /* Our result section */
-
-
-   #ourResult{
+  #ourResult{
     width: 100%;
     padding: 1rem 2rem;
     color: white;
@@ -769,5 +1007,64 @@ button:active{
   }
 
 
+  /* Contact Section */
+
+  .form-container{
+  
+    margin: 1rem 0rem;
+  }
+
+
+  /* Footer */
+
+  .footer{
+    background-color: #071629;
+    padding: 1rem 2rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+
+  .footer-logo img{
+    width: 150px;
+  }
+
+  .footer-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    column-gap: 1rem;
+    row-gap: 2rem;
+    
+  }
+
+
+  .footercontainer-image{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 2rem;
+  }
+
+
+  .footercontainer-image img{
+    width: 6%;
+  
+  }
+  
 
 }
+
+
+
+

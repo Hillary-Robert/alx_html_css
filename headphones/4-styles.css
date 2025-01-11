@@ -39,6 +39,12 @@
 }
 
 
+#hamburger{
+  display: none;
+  padding-right: 1.5rem;
+}
+
+
 .nav-container img{
   width: 200px;
 }
@@ -126,7 +132,7 @@ button:active{
 .header-paragraph{
   width: 50%;
   padding-top: 2rem;
-  padding-bottom: 12rem;
+  padding-bottom: 8rem;
 }
 
 
@@ -180,7 +186,7 @@ button:active{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: end;
+  align-items: center;
   padding-top: 6rem;
 }
 
@@ -258,7 +264,6 @@ button:active{
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 0rem 12rem;
   text-align: center;
   column-gap: 4rem;
 }
@@ -407,6 +412,12 @@ input:focus, textarea:focus{
 
 
 
+
+
+/* Responsiveness */
+
+
+
 @media (max-width: 1200px) {
 
 
@@ -439,6 +450,8 @@ input:focus, textarea:focus{
     padding-bottom: 8rem;
   }
 
+
+
   /* What we do section */
 
 
@@ -455,7 +468,6 @@ input:focus, textarea:focus{
 
   .what-image-container{
     padding-top: 4rem;
-    flex-wrap: wrap;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -588,17 +600,18 @@ input:focus, textarea:focus{
 
   .what-image-container{
     padding-top: 3rem;
-    flex-wrap: wrap;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     row-gap: 2rem;
+    column-gap: 2rem;
+    flex-wrap: wrap;
   }
 
 
   .what-image{
-    row-gap: 1rem;
+    row-gap: 10%;
   }
 
 
@@ -680,18 +693,42 @@ input:focus, textarea:focus{
   .header{
     width: 100%;
     padding: 0rem 4rem;
-    row-gap: 8rem;
+    row-gap: 6rem;
    
+  }
+
+
+  .header-paragraph, .what-text-container p, .resut-text p{
+
+    width: 80%;
+  }
+
+
+
+
+  .nav-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #hamburger{
+    display: block;
+    padding-right: 1.5rem;
+    cursor: pointer;
   }
 
 
   .nav-container img{
     width: 100px;
+  
   }
 
 
   nav{
     width: 60%;
+    display: none;
   }
 
 
@@ -706,6 +743,8 @@ input:focus, textarea:focus{
     padding-bottom: 4rem;
   }
 
+
+  
   /* What we do section */
 
 
@@ -722,17 +761,18 @@ input:focus, textarea:focus{
 
   .what-image-container{
     padding-top: 2rem;
-    flex-wrap: wrap;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     row-gap: 1.5rem;
+    flex-wrap: wrap;
+    column-gap: 2rem;
   }
 
 
   .what-image{
-    row-gap: 1.5rem;
+    row-gap: 10%;
   }
 
 
@@ -811,8 +851,6 @@ input:focus, textarea:focus{
 
 
 
-
-
 @media (max-width: 576px) {
 
   .header{
@@ -860,17 +898,18 @@ input:focus, textarea:focus{
 
   .what-image-container{
     padding-top: 1rem;
-    flex-wrap: wrap;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    row-gap: 1rem;
+    row-gap: 2rem;
+    column-gap: 2rem;
+    flex-wrap: wrap;
   }
 
 
   .what-image{
-    row-gap: 1rem;
+    row-gap: 10%;
   }
 
 
